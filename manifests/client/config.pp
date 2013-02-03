@@ -9,6 +9,7 @@ class pbuilder::client::config {
   file { $pbuilder::params::configfile:
     ensure  => file,
     content => template('pbuilder/etc/pbuilderrc.erb'),
+    require => Class[pbuilder::client::install],
   }
 
   file { $pbuilder::params::cachedir:
