@@ -13,7 +13,7 @@ define pbuilder::function::distribution(
 
   file { "${pbuilder::params::localbindir}/pbuilder-${name}-i386":
     ensure  => file,
-    content => template('pbuilder/pbuilder-distribution.erb'),
+    content => template('pbuilder/usr/local/bin/pbuilder-distribution.erb'),
     mode    => '0755',
   }
 
